@@ -31,18 +31,18 @@ In my second scenario I am deliberately enters wrong password and validate error
 
 ```sh
 
-- So, as I have implemented Page Object Model, we are going to create a java class for each page in the 
-  application.
+- So, as I have implemented Page Object Model, we are going to create a java class for each page 
+  in the application.
 - Inside src/main/java I have created 6 packages.
-- com.depop.config inside this package I have config.properties where we can define our browser, url, 
-  username and password.
-- com.depop.feature package I have two feature files one for positive test case and one for negative 
-  test case. This is based on Gherkin key words.
+- com.depop.config inside this package I have config.properties where we can define our 
+  browser,url,username and password.
+- com.depop.feature package I have two feature files one for positive test case and one for 
+  negative test case. This is based on Gherkin key words.
 - com.depop.pages package where I define my pages for this web application.
 - com.depop.runner package running testng runner.
 - com.depop.StepDefinitiuons package where we can define our selenium code.
-- com.depop.util where we can define our common utilities like How to initialize the browser, which 
-  browser we suppose to run and   finally terminate the browser.
+- com.depop.util where we can define our common utilities like How to initialize the browser, 
+  which browser we suppose to run and finally terminate the browser.
 
 ```
 
@@ -68,10 +68,11 @@ $ mvn -U clean install
 
 ```sh
 
-I have installed chromedriver and gecko driver inside project root chrome and Firefox folder. TestNG 
-runner will pick testng.xml configuration and it will generate beautiful report inside 
-arget/cucumber-reports/advanced-reports/cucumber-html-reports/overview-features.html. Please open 
-overview-features.html in any browser. If you have any questions about this framework please do let me know.
+I have installed chromedriver and gecko driver inside project root chrome and Firefox folder. 
+TestNG runner will pick testng.xml configuration and it will generate beautiful report inside 
+arget/cucumber-reports/advanced-reports/cucumber-html-reports/overview-features.html. 
+Please open overview-features.html in any browser. If you have any questions about this 
+framework please do let me know.
 
 ```
 
