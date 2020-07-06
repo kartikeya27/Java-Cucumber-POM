@@ -1,0 +1,94 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Validate Depop Home Page test",
+        "description": "",
+        "id": "depop-application-test;validate-depop-home-page-test",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3250762627,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user opens browser",
+            "match": {
+              "location": "HomePageSteps.user_opens_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 78481746,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks on login link",
+            "match": {
+              "location": "HomePageSteps.user_clicks_on_login_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 610639382,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user login into app",
+            "match": {
+              "location": "HomePageSteps.user_login_into_app()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5033154520,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "home page is displayed",
+            "match": {
+              "location": "HomePageSteps.home_page_is_displayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 70317925,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user clicks on logout",
+            "match": {
+              "location": "HomePageSteps.user_clicks_on_logout()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 98361539,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "close the browser",
+            "match": {
+              "location": "HomePageSteps.close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Depop Application Test",
+    "description": "",
+    "id": "depop-application-test",
+    "keyword": "Feature",
+    "uri": "depop.feature"
+  }
+]

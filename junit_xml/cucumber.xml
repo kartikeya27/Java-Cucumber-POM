@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="9.141718">
+    <testcase classname="Depop Application Test" name="Validate Depop Home Page test" time="9.141718">
+        <system-out>
+            <![CDATA[Given user opens browser....................................................passed
+Then user clicks on login link..............................................passed
+Then user login into app....................................................passed
+Then home page is displayed.................................................passed
+Then user clicks on logout..................................................passed
+Then close the browser......................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
