@@ -1,15 +1,13 @@
 package com.depop.pages;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.depop.util.TestBase;
 
 public class LoginPage extends TestBase {
-	
-	// Page Factory OR
-//	@FindBy(className = ".styles__DepopLogo-h3rhzv-2")
-//	WebElement depopLogo;
 	
 	@FindBy(linkText = "Login")
 	WebElement linkTxt;
@@ -23,15 +21,13 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath = "//button[@data-testid='login__cta']")
 	WebElement loginBtn;
 	
+	@FindBy(xpath = "//span[@data-testid='login__error--server']")
+	WebElement errorMsg;
+	
 	//Initializing the Page Object:
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}
-	
-	//Actions:
-//	public Boolean validateDepopLogo() {
-//		return depopLogo.isDisplayed();
-//	}
 	
 	public void clickOnLoginLink() {
 		linkTxt.click();
@@ -44,7 +40,8 @@ public class LoginPage extends TestBase {
 		return new HomePage();
 	}
 	
-	public void clickOnLoginButton() {
-		loginBtn.click();
+	public void verifyErrorMessage() {
+		String error = errorMsg.getText();
+		assertEquals("Invalid username or password. Please try again", error);
 	}
 }

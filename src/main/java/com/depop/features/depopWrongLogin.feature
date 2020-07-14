@@ -5,7 +5,7 @@ Scenario Outline: Depop Incorrect Credential test
 	Given user opens browser
 	Then user clicks on login link
 	Then user enters wrong "<username>" and "<password>"
-	Then user clicks on login button
+	Then user login into app
 	Then verify error message
 	Then close the browser
 	

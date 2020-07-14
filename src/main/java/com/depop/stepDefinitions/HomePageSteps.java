@@ -1,7 +1,6 @@
 package com.depop.stepDefinitions;
 
 import org.openqa.selenium.By;
-import com.depop.pages.ErrorLoginPage;
 import com.depop.pages.HomePage;
 import com.depop.pages.LoginPage;
 import com.depop.util.TestBase;
@@ -13,7 +12,6 @@ public class HomePageSteps extends TestBase {
 	
 	LoginPage loginPage;
 	HomePage homePage;
-	ErrorLoginPage errorLoginPage;
 	
 	@Given("^user opens browser$")
 	public void user_opens_browser()  {
@@ -26,28 +24,15 @@ public class HomePageSteps extends TestBase {
 		loginPage.clickOnLoginLink();
 	}
 
-//	@Then("^user is on login page$")
-//	public void user_is_on_login_page() {
-//	    loginPage.validateDepopLogo();
-//	}
-	
 	@Then("^user enters wrong \"(.*)\" and \"(.*)\"$")  
 	public void user_enters_wrong_username_and_password(String username, String password)  {
 		driver.findElement(By.name("username")).sendKeys(username);
 		driver.findElement(By.name("password")).sendKeys(password);
 	}
 	
-	@Then("^user clicks on login button$") 
-	public void user_clicks_on_login_button() throws InterruptedException {
-		errorLoginPage = new ErrorLoginPage();
-		loginPage.clickOnLoginButton();
-		Thread.sleep(1000);
-	}
-	
 	@Then("^verify error message$")
 	public void verify_error_message() {
-		//errorLoginPage = new ErrorLoginPage();
-		errorLoginPage.verifyErrorMessage();
+		loginPage.verifyErrorMessage();
 	}
 	
 	@Then("^user login into app$")
